@@ -1,4 +1,4 @@
-# CastCompanionLibrary-android
+# CastCompanionLibrary-android [![travis-ci](https://travis-ci.org/andrewdavidmackenzie/CastCompanionLibrary-android.png?branch=master)](https://travis-ci.org/andrewdavidmackenzie/CastCompanionLibrary-android)
 
 CastCompanionLibrary-android is a library project to enable developers integrate Cast capabilities into their applications faster and easier.
 
