@@ -29,8 +29,22 @@ See LICENSE
 Google Cast Developers Community on Google+ [http://goo.gl/TPLDxj](http://goo.gl/TPLDxj)
 
 ## Change List
+1.14
+
+ * Wrapped some IllegalStateExceptions for proper handling. This should address issue #144 as well.
+ * Fixing an issue that sometimes when a media finishes, start of the next media would result in
+ immediate closure of the VideoCastControllerActivity
+ * Fixed a corner case where sometimes when the receiver is stopped due to reaching a time out, the
+  sender was disconnecting but the cast icon was not reflecting that correctly.
+
+1.13
+
+ * Addressed a NPE in reconnection task (issue #143)
+ * Made sure we don't set the duration of a MediaInfo object to a negative number
+ * Some internal cleanup
+
 1.12
-### Notice: there are some backward-incompatible changes in this release, please read the change list carefully
+#### Notice: there are some backward-incompatible changes in this release, please read the change list carefully
  * Changing CCL to use Application Context in most everything. As a result, one does not need to set context for CCL in each
        Activity which should avoid any context leaks and prevent some random NPEs. Consequently, there will be no "dialog" supported by
        CCL unless the caller method provides an explicit context. For various versions of reconnectSessionIfPossible, we now have
